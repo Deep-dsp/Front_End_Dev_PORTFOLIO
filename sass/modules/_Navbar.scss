@@ -2,7 +2,10 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 8vh;
+    padding: 1em;
+
+    position: sticky;
+    top: 0;
 
     img{
         width: 45px;
@@ -13,7 +16,8 @@ header{
 
         position: absolute;
         top: 8vh;
-        right: 0;
+        right: -100%;
+        opacity: 0;
         padding: 1em 2em;
 
         background: rgba($color: #000000, $alpha: 0.35);
@@ -23,6 +27,11 @@ header{
 
         width: 100%;
         font-family: 'Poppins', sans-serif;
+
+        transition:  right 0.5s ease;
+        -o-transition:  right 0.5s ease;
+        -webkit-transition:  right 0.5s ease;
+        -moz-transition:  right 0.5s ease;
 
         .navlink{
             text-align: center;
@@ -41,6 +50,11 @@ header{
         }
     }
 
+    // Navbar transition animation class
+    .navbar-anim{
+        right: 0;
+        opacity: 1;
+    }
     // Hamburger Menu
     .hamburger{
         
@@ -77,6 +91,10 @@ header{
 
     }
 
+    .bar-anim{
+        width: 30px;
+    }
+
     .hamburger:hover,
     .hamburger:focus{
         cursor: pointer;
@@ -91,6 +109,7 @@ header{
     }
 }
 
+// media Queries
 @media only screen and (max-width: 320px){
     .header{
         .navbar{
