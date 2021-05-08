@@ -1,0 +1,119 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+
+    img{
+        width: 45px;
+        height: 40px;
+    }
+
+    .navbar{
+
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        padding: 1em 2em;
+
+        background: rgba($color: #000000, $alpha: 0.35);
+
+        display: flex;
+        justify-content: space-between;
+
+        width: 100%;
+        font-family: 'Poppins', sans-serif;
+
+        .navlink{
+            text-align: center;
+            a{
+                font-size: 0.85rem;
+                letter-spacing: 2px;
+                color: #fff;
+                padding: 1em;
+                border: 0px solid white;
+            }
+
+            a:hover,
+            a:focus{
+                border: 1px solid white;
+            }
+        }
+    }
+
+    // Hamburger Menu
+    .hamburger{
+        
+        display: flex;
+        flex-direction: column;
+        padding: 0.75em;
+        border-radius: 15px;
+        background: rgba($color: #000000, $alpha: 0.35);
+        
+        .line{
+            height: 2px;
+            background: #fff;
+            margin: 0.2em 0;
+        }
+
+        .line1{
+            width: 30px;
+        }
+
+        .line2{
+            width: 20px;
+        }
+
+        .line3{
+            width: 10px;
+        }
+
+        .line2, .line3{
+            transition: 0.35s ease;
+            -webkit-transition: 0.35s ease;
+            -moz-transition: 0.35s ease;
+            -o-transition: 0.35s ease;
+        }
+
+    }
+
+    .hamburger:hover,
+    .hamburger:focus{
+        cursor: pointer;
+
+        .line2{
+            width: 30px;
+        }
+
+        .line3{
+            width: 30px;
+        }
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .header{
+        .navbar{
+            padding: 1em;
+            .navlink a{
+                padding: 1em 0.8em;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .header{
+        .navbar{
+            width: 60%;
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .header{
+        .navbar{
+            width: 40%;
+        }
+    }
+}

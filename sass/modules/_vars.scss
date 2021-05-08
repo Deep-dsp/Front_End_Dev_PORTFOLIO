@@ -1,0 +1,15 @@
+// Layout Colors
+$Orange-primary-color: #f15a29;
+$white-bg-color: #2F303A;
+$navbar-bg-color: #b0e7ff;
+
+// Font Colors
+$font-primary-color: #434343;
+$font-bgtext-color: #ebebeb;
+
+
+@mixin alignfull{
+    margin-left  : calc( -100vw / 2 + 100% / 2 );
+    margin-right : calc( -100vw / 2 + 100% / 2 );
+    max-width    : 100vw;
+}
