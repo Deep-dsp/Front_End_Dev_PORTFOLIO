@@ -7,9 +7,14 @@
     font-family: 'Poppins', sans-serif;
     color: $font-bgtext-color;
     height: 90vh;
+    // position: relative;
+    p:first-child{
+        font-size: 1.25rem;
+        margin-bottom: 1em;
+    }
 
     p.name{
-        font-size: 2.5rem;
+        font-size: 1.8rem;
         font-weight: bold;
         text-transform: uppercase;
     }
@@ -21,11 +26,64 @@
 
         .typewriter{
             margin-left: 0.5em;
-
+    
             span{
-                font-size: 1.5rem;
+                font-size: 1.25rem;
                 color: rgb(192, 192, 192);
             }
+        }
+    }
+
+    p.hello-text{
+        position: absolute;
+        top: 31%;
+
+        opacity: 0.2;
+        // font
+        font-size: 8rem;
+        font-weight: 700;
+        z-index: -1;
+        color: $white-bg-color;
+
+        // stroke
+        -webkit-text-stroke: 1px lightgray;
+        -webkit-text-stroke-color: lightgray;
+    }
+
+    .wave{
+        @include alignfull;
+        width: 135%;
+
+        position: absolute;
+        bottom: -1%;
+    }
+}
+
+@media screen and (min-width: 768px){
+
+    #name-container{
+        p.name{
+            font-size: 3rem;
+        }
+    
+        .position-con{
+    
+            .typewriter{
+    
+                span{
+                    font-size: 1.5rem;
+                    color: rgb(192, 192, 192);
+                }
+            }
+        }
+
+        p.hello-text{
+            top: 27%;
+            font-size: 10rem;
+        }
+
+        .wave{
+            bottom: -3%;
         }
     }
 }

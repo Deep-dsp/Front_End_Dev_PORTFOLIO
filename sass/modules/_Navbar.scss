@@ -43,8 +43,8 @@ header{
                 border: 0px solid white;
             }
 
-            a:hover,
-            a:focus{
+            a:hover{
+                cursor: pointer;
                 border: 1px solid white;
             }
         }
