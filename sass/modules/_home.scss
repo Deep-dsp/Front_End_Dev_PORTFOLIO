@@ -1,0 +1,31 @@
+#name-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Poppins', sans-serif;
+    color: $font-bgtext-color;
+    height: 90vh;
+
+    p.name{
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .position-con{
+
+        display: flex;
+        margin-top: 1em;
+
+        .typewriter{
+            margin-left: 0.5em;
+
+            span{
+                font-size: 1.5rem;
+                color: rgb(192, 192, 192);
+            }
+        }
+    }
+}
