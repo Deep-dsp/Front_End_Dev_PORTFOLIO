@@ -1,0 +1,125 @@
+#portfolio-section{
+    padding: 2em 0;
+
+    .portfolio-title{
+        font-size: 2rem;
+        text-align: right;
+
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: $white-bg-color;
+
+        // stroke
+        -webkit-text-stroke: 1px lightgray;
+        -webkit-text-stroke-color: lightgray;
+    }
+
+    .portfolio-set{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2em 0;
+
+        .card{
+
+            font-family: 'Arial', sans-serif;
+            background: white;
+            margin-bottom: 1em;
+            border-radius: 10px;
+            box-shadow: 8px 8px 10px rgba(170, 170, 170, 0.35);
+
+            .card-image img{
+                padding-top: 1em;
+                width: 100%;
+            }
+
+            .card-details{
+                padding: 1em;
+                .project-title{
+                    color: $font-primary-color;
+                    font-size: 0.98rem;
+                    font-weight: bold;
+                }
+
+                .project-detail{
+                    color: $font-primary-color;
+                    font-size: 0.90rem;
+                    margin: 1em 0;
+                    line-height: 18px;
+
+                    span{
+                        font-size: 0.85rem;
+                        font-weight: bold;
+                    }
+                }
+
+                .project-links{
+                    display: flex;
+                    justify-content: space-evenly;
+
+                    a{
+                        font-size: 0.85rem;
+                        color: $Orange-primary-color;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Media Queries
+@media screen and (min-width: 768px){
+    #portfolio-section{
+
+        display: flex;
+        justify-content: space-evenly;
+
+        .portfolio-title{
+            position: relative;
+            p{
+                position: fixed;
+                top: 50%;
+                left: 0%;
+                transform: rotate(-90deg);
+                font-size: 10rem;
+                letter-spacing: 10px;
+                z-index: -99;
+            }
+        }
+        .portfolio-set{
+            .card{
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: center;
+                align-items: center;
+                max-height: 350px;
+                max-width: 1024px;
+
+                .card-image{
+                    img{
+                        float: right;
+                        width: 300px;
+                    }
+                }
+
+                .card-details{
+                    .project-links{
+                        display: block;
+            
+                        a{
+                            font-size: 0.85rem;
+                            color: $Orange-primary-color;
+                            font-weight: bold;
+                        }
+
+                        a:last-child{
+                            margin-left: 3em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
