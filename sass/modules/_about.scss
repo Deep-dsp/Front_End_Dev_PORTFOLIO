@@ -1,0 +1,49 @@
+#intro-block{
+    display: flex;
+    flex-direction: column;
+    color: $font-bgtext-color;
+
+    font-family: 'Poppins', sans-serif;
+
+    img{
+        margin: 2em 0;
+    }
+
+    .intro-subblock{
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+
+        p{
+            font-size: 0.85rem;
+            line-height: 18px;
+        }
+        
+        .btn-group{
+            margin: 2em 0;
+            display: flex;
+            justify-content: space-evenly;
+
+            button{
+                background: none;
+                border: none;
+                padding: 1em 2em;
+                border-radius: 50px;
+                cursor: pointer;
+            }
+
+            button:first-child{
+                border: 2px solid #fff;
+                color: $font-bgtext-color;
+            }
+
+            button:last-child{
+                border: 2px solid #fff;
+                background: #fff;
+                a{
+                    color: $font-primary-color;
+                }
+            }
+        }
+    }
+}
